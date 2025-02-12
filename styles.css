@@ -1,11 +1,11 @@
-*{
-    border: 1px solid red;
+* {
+    /*border: 1px solid blue;*/
     margin: 0;
     padding: 0;
 }
 .layout-container {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
     width: 100vw;
     height: 100vh;
@@ -13,8 +13,45 @@
 
 .sidebar-container {
     display: grid;
-    grid-row: 1 / 3;
+    grid-area: 1 / 1 / 3 / 2;
     grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr 6fr;
+    background-color: green;
+}
+
+.sidebar-text {
+    margin-left: 15px;
+}
+
+.sidebar-container
+div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1rem;
+    flex: auto;
+}
+
+.sidebar-container div:last-child {
+    align-self: flex-start;
+    padding-top: 15px;
+}
+
+.sidebar-container div:nth-child(7) {
+    align-self: flex-start;
+    padding-top: 15px;
+}
+
+.sidebar-container
+img {
+    max-width: 10%;
+    min-width: 8%;
+    height: auto;
+}
+
+.sidebar-container div:first-child img {
+    max-width: 20%;
+    min-width: 18%;
+    height: auto;
 }
 
 .header-container {
